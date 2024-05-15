@@ -5,7 +5,7 @@ import PlaceItem from './PlaceItem';
 export default function PlacesList({places}) {
   if (!places || places.length === 0) {
     return (
-      <View>
+      <View style={styles.fallbackContainer}>
         <Text>No place is added - try adding some !</Text>
       </View>
     );
@@ -19,4 +19,10 @@ export default function PlacesList({places}) {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  fallbackContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
